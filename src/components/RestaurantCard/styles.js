@@ -3,9 +3,11 @@ import styled from 'styled-components'
 export const Card = styled.div`
   position: relative;
   display: flex;
-  width: 33%;
+  width: 30%;
   height: 100px;
   background: #fff;
+  border-radius: 4px;
+  margin-bottom: 34px;
   -webkit-box-shadow: 0px 2px 4px #00000029;
   -moz-box-shadow: 0px 2px 4px #00000029;
   box-shadow: 0px 2px 4px #00000029;
@@ -29,11 +31,14 @@ export const RestaurantInfo = styled.div`
 `
 
 export const Name = styled.p`
-  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 500;
   color: #404040;
+  margin: 0;
 `
 export const Address = styled.p`
-  font-size: 12px;
+  margin: 0;
+  font-size: 0.75rem;
   color: #404040;
 `
 
@@ -44,7 +49,7 @@ export const Status = styled.div`
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: #2b0d61;
+  background: ${({ isOpen }) => (isOpen ? '#2b0d61' : '#B5ABD4')};
   -webkit-box-shadow: 0px 1px 2px #00000029;
   -moz-box-shadow: 0px 1px 2px #00000029;
   box-shadow: 0px 1px 2px #00000029;

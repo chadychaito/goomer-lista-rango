@@ -1,15 +1,15 @@
 import { Card, RestaurantLogo, Logo, RestaurantInfo, Name, Address, Status } from './styles'
 
-export const RestaurantCard = () => (
+export const RestaurantCard = ({ isOpen }) => (
   <Card>
     <RestaurantLogo>
-      <Logo src="https://cnpj.biz/img/logo_cnpj_biz.png" />
+      <Logo src="images/vegan-restaurant-logo-design_1438-10.png" />
     </RestaurantLogo>
     <RestaurantInfo>
       {/* Verificar se é bom usar h2 */}
       <Name>Nome do Restaurante</Name>
-      <Address>RestaurantInfo</Address>
+      <Address>Endereço do restaurante</Address>
     </RestaurantInfo>
-    <Status>a</Status>
+    <Status isOpen={isOpen}></Status>
   </Card>
 )
