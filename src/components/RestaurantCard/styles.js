@@ -41,16 +41,25 @@ export const Address = styled.p`
   font-size: 0.75rem;
   color: #404040;
 `
-
-export const Status = styled.div`
+export const StatusGroup = styled.div`
   position: absolute;
-  right: -1.5rem;
-  top: -1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
+  right: -1.5rem;
+  top: -1.5rem;
   background: ${({ isOpen }) => (isOpen ? '#2b0d61' : '#B5ABD4')};
   -webkit-box-shadow: 0px 1px 2px #00000029;
   -moz-box-shadow: 0px 1px 2px #00000029;
   box-shadow: 0px 1px 2px #00000029;
+`
+
+export const Status = styled.p`
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.5rem;
 `

@@ -7,7 +7,7 @@ export const RestaurantList = () => {
   return (
     <Container>
       <Title>Bem-vindo ao Lista Rango</Title>
-      <Search />
+      <Search id="1" label="Buscar estabelecimento" />
       <Wrapper>
         <RestaurantCard isOpen />
         <RestaurantCard />

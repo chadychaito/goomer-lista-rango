@@ -1,4 +1,13 @@
-import { Card, RestaurantLogo, Logo, RestaurantInfo, Name, Address, Status } from './styles'
+import {
+  Card,
+  RestaurantLogo,
+  Logo,
+  RestaurantInfo,
+  Name,
+  Address,
+  Status,
+  StatusGroup
+} from './styles'
 
 export const RestaurantCard = ({ isOpen }) => (
   <Card>
@@ -10,6 +19,8 @@ export const RestaurantCard = ({ isOpen }) => (
       <Name>Nome do Restaurante</Name>
       <Address>Endereço do restaurante</Address>
     </RestaurantInfo>
-    <Status isOpen={isOpen}></Status>
+    <StatusGroup isOpen={isOpen}>
+      <Status>{isOpen ? 'Aberto agora' : 'Fechado'}</Status>
+    </StatusGroup>
   </Card>
 )

@@ -1,11 +1,21 @@
+import { string } from 'prop-types'
 import { Wrapper, Label, Input, Icon } from './styles'
 
-export const Search = ({ id }) => {
+export const Search = ({ id, label }) => {
   return (
     <Wrapper>
-      <Label htmFor={id}>Buscar estabelecimento</Label>
-      <Input />
-      <Icon />
+      <Label id={id}>{label}</Label>
+      <Input type="text" aria-label={label} aria-describedby={id} />
+      <Icon src="images/search.svg" />
     </Wrapper>
   )
+}
+
+Search.propType = {
+  id: string.isRequired,
+  label: string
+}
+
+Search.defaultProps = {
+  label: 'Buscar'
 }
