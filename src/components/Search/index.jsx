@@ -2,12 +2,12 @@ import { array, func, string } from 'prop-types'
 import { useState } from 'react'
 import { Wrapper, Label, Input, Icon } from './styles'
 
-export const Search = ({ id, label, state, setState }) => {
+export const Search = ({ id, label, onChange }) => {
   const [value, setValue] = useState('')
+
   const handleChange = event => {
-    // setValue(event.target.value)
-    // const filteredValue = state.filter(elem => console.log(elem.name))
-    // setState(filteredValue)
+    setValue(event.target.value)
+    onChange(event.target.value)
   }
 
   return (
@@ -28,12 +28,9 @@ export const Search = ({ id, label, state, setState }) => {
 Search.propType = {
   id: string.isRequired,
   label: string,
-  state: array,
-  setState: func
+  onChange: func.isRequired
 }
 
 Search.defaultProps = {
-  label: 'Buscar',
-  state: [],
-  setState: () => {}
+  label: 'Buscar'
 }

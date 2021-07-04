@@ -7,19 +7,28 @@ import { GetAllRestaurants } from 'src/requests/getAllRestaurants'
 
 export const RestaurantList = () => {
   const [restaurants, setRestaurants] = useState([])
+  const [list, setList] = useState([])
 
   useEffect(async () => {
     const { data } = await GetAllRestaurants()
     setRestaurants(data)
+    setList(data)
   }, [])
+
+  const onChange = value => {
+    const filteredValue = restaurants.filter(
+      restaurant => restaurant.name.toLowerCase().indexOf(value.toLowerCase()) > -1
+    )
+    setList(filteredValue)
+  }
 
   return (
     <Container>
       <Title>Bem-vindo ao Lista Rango</Title>
-      <Search id="1" label="Buscar estabelecimento" state={restaurants} setState={setRestaurants} />
+      <Search id="search-all-restaurants" label="Buscar estabelecimento" onChange={onChange} />
       <Wrapper>
-        {restaurants &&
-          restaurants.map(restaurant => (
+        {list &&
+          list.map(restaurant => (
             <RestaurantCard
               key={restaurant.id}
               name={restaurant.name}
