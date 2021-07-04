@@ -12,18 +12,15 @@ export const Card = styled.div`
   -moz-box-shadow: 0px 2px 4px #00000029;
   box-shadow: 0px 2px 4px #00000029;
 `
-export const RestaurantLogo = styled.div`
-  height: 100px;
-  width: 100px;
-`
 
 export const Logo = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: 100px;
+  width: 100px;
+  border-radius: 4px 0 0 4px;
+  object-fit: cover;
 `
 
-export const RestaurantInfo = styled.div`
+export const Info = styled.div`
   padding-left: 1.625rem;
   display: flex;
   flex-direction: column;
