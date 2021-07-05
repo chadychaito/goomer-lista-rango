@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import { PageHeader } from 'src/components/PageHeader'
-import { RestaurantList } from 'src/containers/RestaurantList'
+import { PageHeader } from 'components/PageHeader'
+import { RestaurantList } from 'containers/RestaurantList'
 
 function HomePage() {
   return (

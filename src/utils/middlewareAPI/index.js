@@ -1,4 +1,4 @@
-import { Axios } from 'src/utils/Axios'
+import { Axios } from 'utils/Axios'
 
 export const middlewareAPI = Axios.create({
   baseUrl: `${process.env.NEXT_PUBLIC_URL_PREFIX}/api/`

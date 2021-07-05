@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import { RestaurantCard } from 'src/components/RestaurantCard'
-import { Search } from 'src/components/Search'
-import { Container } from 'src/components/Container'
+import { RestaurantCard } from 'components/RestaurantCard'
+import { Search } from 'components/Search'
+import { Container } from 'components/Container'
 import { Title, Wrapper } from './styles'
-import { GetAllRestaurants } from 'src/requests/getAllRestaurants'
+import { GetAllRestaurants } from 'requests/getAllRestaurants'
 
 export const RestaurantList = () => {
   const [restaurants, setRestaurants] = useState([])

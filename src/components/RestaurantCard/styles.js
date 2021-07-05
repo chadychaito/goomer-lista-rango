@@ -6,16 +6,16 @@ export const Card = styled.div`
   width: 30%;
   height: 100px;
   background: #fff;
-  border-radius: 4px;
-  margin-bottom: 34px;
+  border-radius: 0.25rem;
+  margin-bottom: 2.215rem;
   -webkit-box-shadow: 0px 2px 4px #00000029;
   -moz-box-shadow: 0px 2px 4px #00000029;
   box-shadow: 0px 2px 4px #00000029;
 `
 
 export const Logo = styled.img`
-  height: 100px;
-  width: 100px;
+  height: 6.25rem;
+  width: 6.25rem;
   border-radius: 4px 0 0 4px;
   object-fit: cover;
 `

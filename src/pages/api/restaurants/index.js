@@ -1,6 +1,6 @@
-import { goomerAPI } from 'src/utils/goomerAPI'
+import { goomerAPI } from 'utils/goomerAPI'
 
-export default goomerAPI = async res => {
-  const { status, data = {} } = await goomerAPI('/restaurants')
+export default async res => {
+  const { status, data = {} } = await goomerAPI.get('/restaurants')
   res.status(status).json(data)
 }
